@@ -1,46 +1,6 @@
 # Leetcode Workthroughs
 
-*Short description of your project, in one or two sentences.* 
-
-## Languages / Frameworks used
-
-* Adrian
-* Adrianblahblah
-* Adrianbloohblahblooey
-
-## Purpose / Goals
-
-### Dependencies
-
-*Provide links and descriptions for the third-party libraries you're having your users install.*
-
-### Installation
-
-* Mac OS X
-* Ubuntu
-* Windows (if applicable)
-
-### Getting started
-
-*What does your user need to know to get everything ready after installation?*
-*Think about databases, config files, and settings.*
-
-## Usage
-
-*Give your users a sense of the workflow for using your project/tool.*
-*For a website this might include code for running locally.*
-*For an API this might include method and parameter specs.*
-
-## Demo
-
-*Grab a simple block of code that makes use of your project/tool and paste it here.*
-
-## Team
-
-* User's Name
-* *Name, Organization - role or tasks worked on*
-
-*Add a "contributors" section if you've incorporated pull requests.*
+*Leetcode workthrough attempts (aiming for 100+ hrs logged and 75+ problems completed* 
 
 ## Errors and bugs
 
