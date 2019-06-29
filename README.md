@@ -1,6 +1,6 @@
 # Leetcode Workthroughs
 
-*Leetcode workthrough attempts (aiming for 100+ hrs logged and 75+ problems completed* 
+Leetcode workthrough attempts (aiming for 100+ hrs logged and 75+ problems completed 
 
 ## Errors and bugs
 
