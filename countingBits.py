@@ -12,3 +12,12 @@ def countBits(num):
                 if j == "1":
                     num += 1
             bitsList.append(num)
+
+def optimizedCountBits(num):
+    res = [0]
+    
+    while len(res) <= num:
+        res += [i+1 for i in res]
+    return res[:num+1]
+
+optimizedCountBits(16)
