@@ -20,6 +20,6 @@ def isValid(s):
             elif stringList[i] in keys and seen and seen.pop() is not parentheses[stringList[i]]:
                 return False
             
-        return (len(seen) == 0)
+        return True
 
 print (isValid("()"))
