@@ -12,7 +12,9 @@ def threeSum(nums):
         for i in range(len(nums)-2):
             for j in range(i+1, len(nums)-1):
                 for k in range(j+1, len(nums)):
-                    triplets_list.append([nums[i], nums[j], nums[k]])
+                    append_list = sorted([nums[i], nums[j], nums[k]])
+                    if append_list not in triplets_list:
+                        triplets_list.append(append_list)
         
         for i in range(len(triplets_list)):
             tempSum = 0
@@ -24,6 +26,8 @@ def threeSum(nums):
         for i in range(len(final_triplets_list)):
             final_triplets_list[i] = sorted(final_triplets_list[i])
 
-        print ("final: " + str(final_triplets_list))
+        return final_triplets_list
+        
+
     
-print (str(threeSum([-1,0,1,2,-1,4])))
+print (str(threeSum([1, -1, -1, 0])))
