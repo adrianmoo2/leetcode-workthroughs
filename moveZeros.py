@@ -11,6 +11,5 @@ def moveZeroes(self, nums):
             del nums[i]
             nums.append(0)
             length_to_iterate -= 1
-            continue
         else:
             i += 1
