@@ -3,15 +3,12 @@ def productExceptSelf(nums):
     :type nums: List[int]
     :rtype: List[int]
     """
-    tempList = [1]*len(nums)
-    
-    for i in range(len(nums)):
-        tempValue = tempList[i]
+    temp_list = nums
 
-        tempList = [elem * nums[i] for elem in tempList]
+    temp_list = [1/x for x in temp_list]
 
-        tempList[i] = tempValue
-        print ("tempList: " + str(tempList))
-    return tempList
+    temp_list = [(c,v*nums[c]) for c,v in enumerate(nums)]
 
-productExceptSelf([1,2,3,4])
+    return temp_list
+
+print (str(productExceptSelf([1,2,3,4])))
