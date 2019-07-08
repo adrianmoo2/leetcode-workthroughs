@@ -30,17 +30,19 @@ def lengthOfLIS(nums):
     elif len(nums) == 1:
         return 1
     else:
-        longestList = []
+        longest_list = []
         for i in range(len(nums)-1):
-            tempList = [nums[i]]
+            temp_list = [nums[i]]
+            print (nums[i])
             for j in range(i+1, len(nums)):
-                if (nums[j] > tempList[-1]):
-                    print (nums[j])
-                    tempList.append(nums[j])
-            if (len(tempList) > len(longestList)):
-                longestList = tempList
-            print ("tempList: " + str(tempList))
+                if nums[j] > temp_list[-1]:
+                    temp_list.append(nums[j])
+                elif len(temp_list) >= 2 and nums[j] < temp_list[-1] and nums[j] > temp_list[-2]:
+                    temp_list[-1] = nums[j]
+            if (len(temp_list) > len(longest_list)):
+                longest_list = temp_list
+            print ("temp_list: " + str(temp_list))
     
-    return len(longestList)
+    return len(longest_list)
 
-print(lengthOfLIS([10,9,2,5,3,7,101,18]))
+print(lengthOfLIS([10,9,2,5,3,4]))
