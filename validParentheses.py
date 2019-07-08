@@ -3,7 +3,7 @@ def isValid(s):
     :type s: str
     :rtype: bool
     """
-    parentheses = {')':'(', '}':'{',']':'[]'}
+    parentheses = {')':'(', '}':'{',']':'['}
     keys = parentheses.keys()
     values = parentheses.values()
     
@@ -22,4 +22,4 @@ def isValid(s):
             
         return True
 
-print (isValid("()"))
+print (isValid("([)]"))
