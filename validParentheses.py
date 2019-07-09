@@ -19,7 +19,9 @@ def isValid(s):
                 seen.append(stringList[i])
             elif stringList[i] in keys and seen and seen.pop() is not parentheses[stringList[i]]:
                 return False
-            
-        return True
+        if seen:
+            return False
+        else:
+            return True
 
-print (isValid("([)]"))
+print (isValid("(("))
