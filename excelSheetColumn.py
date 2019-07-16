@@ -1,4 +1,4 @@
-def titleToNumberReversed(s):
+def titleToNumber(s):
     """
     :type s: str
     :rtype: int
@@ -20,4 +20,15 @@ def titleToNumberReversed(s):
         counter += 1
     return res
 
-print (str(titleToNumberReversed("ZY")))
+def numberToTitle(n):
+    exp = 0
+    max_for_len = 0
+
+    while max_for_len < n:
+        max_for_len += (26 ** exp) * 26
+        exp += 1
+
+    return exp
+
+
+print (str(numberToTitle(28)))
