@@ -16,6 +16,7 @@ def firstUniqueChar(s):
     for i,v in enumerate(list(s)):
         if seen_map[v] == 1:
             return i
+            
     return -1
 
 firstUniqueChar("loveleetcode")

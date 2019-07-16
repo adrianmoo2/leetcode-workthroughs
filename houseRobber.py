@@ -3,12 +3,12 @@ def rob(nums):
     :type nums: List[int]
     :rtype: int
     """
-    print (str(nums))
-    if len(nums) == 0:
-        return 0
-    elif len(nums) == 1:
-        return nums[0]
-    else:
-        return max(rob(nums[2:]) + nums[0], rob(nums[1:]))
+    prev = curr = 0
+
+    for num in nums:
+        temp = prev
+        prev = curr
+        curr = max(num+temp, prev)
+    return curr
 
 print (str(rob([2,7,9,3,1])))
