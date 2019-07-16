@@ -22,10 +22,10 @@ def titleToNumber(s):
 
 def numberToTitle(n):
     exp = 0
-    max_for_len = 0
+    max_for_exp = 0
 
-    while max_for_len < n:
-        max_for_len += (26 ** exp) * 26
+    while max_for_exp < n:
+        max_for_exp += (26 ** exp) * 26
         exp += 1
 
     return exp
