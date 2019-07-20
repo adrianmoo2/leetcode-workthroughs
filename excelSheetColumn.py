@@ -21,6 +21,16 @@ def titleToNumber(s):
     return res
 
 def numberToTitle(n):
+
+    alphabet_char = ord("A")
+    alphabet_map = {}
+    value = 1
+
+    while alphabet_char <= ord('Z'):
+        alphabet_map[value] = chr(alphabet_char)
+        value += 1
+        alphabet_char += 1
+
     exp = 0
     max_for_exp = 0
 
@@ -28,7 +38,23 @@ def numberToTitle(n):
         max_for_exp += (26 ** exp) * 26
         exp += 1
 
-    return exp
+    temp_num = n
+    res = ""
+    
+    while exp >= 0:
+        counter = 26
+        while counter > 0:
+            if temp_num > (26 ** exp) * counter:
+                print ("temp_num:" + str(temp_num))
+                print ("exp: " + str(exp))
+                print ("counter: " + str(counter))
+                
+                res += alphabet_map[counter+1]
+                temp_num -= (26 ** exp) * counter+1
+            counter -= 1
+        exp -= 1
+
+    return res
 
 
 print (str(numberToTitle(28)))
