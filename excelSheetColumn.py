@@ -45,14 +45,14 @@ def numberToTitle(n):
         counter = 26
         while counter > 0:
             if temp_num >= (26 ** exp) * counter:
-                print ("temp_num: " + str(temp_num))
-                print ("exp: " + str(exp))
-                print ("counter: " + str(counter))
+                # print ("temp_num: " + str(temp_num))
+                # print ("exp: " + str(exp))
+                # print ("counter: " + str(counter))
                 
                 res += alphabet_map[counter]
                 temp_num -= (26 ** exp) * (counter)
 
-                print ("res temp_num: " + str(temp_num))
+                # print ("res temp_num: " + str(temp_num))
             counter -= 1
         exp -= 1
 
