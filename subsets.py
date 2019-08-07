@@ -18,5 +18,12 @@ def helper(subsets, i, nums, res):
         subsets[i] = nums[i]
         helper(subsets, i+1, nums, res)
 
-subsets([1,2,3])
+def subsetsIterative(nums):
+    res = [[]]
+    for num in nums:
+        print ("res: " + str(res))
+        print (str([item+[num] for item in res]))
+        res += [item+[num] for item in res]
+
+subsetsIterative([1,2,3])
 
