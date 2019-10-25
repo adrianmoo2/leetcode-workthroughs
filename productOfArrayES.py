@@ -1,3 +1,5 @@
+import numpy
+
 def productExceptSelf(nums):
     """
     :type nums: List[int]
@@ -11,4 +13,16 @@ def productExceptSelf(nums):
 
     return temp_list
 
-print (str(productExceptSelf([1,2,3,4])))
+def secondAttempt(nums):
+    prod = [None]*len(nums)
+
+    for i in range(len(nums)):
+        prod[i] = nums[:i] + nums[i+1:]
+    
+    for i in range(len(nums)):
+        prod[i] = numpy.prod(prod[i])
+        
+    print ("prod: " + str(prod))
+
+
+print (str(secondAttempt([1,2,3,4])))

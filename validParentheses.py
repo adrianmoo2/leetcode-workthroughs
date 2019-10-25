@@ -24,4 +24,21 @@ def isValid(s):
         else:
             return True
 
-print (isValid("(("))
+def isValid_Second_Attempt(s):
+    paren_map = {"(":")", "[":"]", "{":"}"}
+
+    stack = []
+    for i in range(len(s)):
+        if s[i] in paren_map:
+            stack.append(paren_map[s[i]])
+        elif stack and s[i] == stack[-1]:
+            del stack[-1]
+        else:
+            return False
+    
+    if not stack:
+        return True
+    else:
+        return False
+
+print (isValid_Second_Attempt("(]"))
